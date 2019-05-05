@@ -1,0 +1,1 @@
+var l=document.getElementsByClassName("eyeball");document.onmousemove=function(){for(var e=100*event.clientX/window.innerWidth+"%",t=100*event.clientY/window.innerHeight+"%",n=0;n<2;n++)l[n].style.left=e,l[n].style.top=t,l[n].style.transform="translate(-"+e+", -"+t+")"};

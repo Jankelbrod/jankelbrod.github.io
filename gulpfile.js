@@ -17,12 +17,13 @@ const cssFiles = [
 */
 
 const cssFiles = [
-    './src/css/main.sass',
-    './src/css/colour.sass'
+    './src/css/colour.sass',
+    './src/css/main.sass'   
 ]
 
 const jsFiles = [
     './src/js/lib.js',
+    './src/js/canvas.js',
     './src/js/main.js'
 ]
 
@@ -67,7 +68,7 @@ function scripts() {
 }
 
 function page() {
-    return gulp.src('./src/*.pug')
+    return gulp.src('./src/index.pug')
     .pipe(pug({
         pretty: true
     }))
@@ -92,6 +93,7 @@ function watch() {
     gulp.watch('./src/css/**/*.sass', styles)
     // следить за js файлами
     gulp.watch('./src/js/**/*.js', scripts)
+    gulp.watch('./src/*.pug', page)
     // перезагружать браузер при изменении html файла
     gulp.watch('./src/*.pug').on('change', browserSync.reload)
 }

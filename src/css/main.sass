@@ -1,0 +1,80 @@
+$background: #0097ea;
+
+html,
+body 
+    margin: 0
+    padding: 0
+
+body
+    background-color: $background  
+
+.profile-card
+    position: relative
+    display: block
+    background-image: url('/src/img/without glasses.png')
+    background-position: center
+    background-size: cover
+    width: 350px
+    height: 300px
+
+.glass
+    position: absolute
+    width: 24px
+    height: 24px
+    border: 10px solid #000
+    background-color: #fff
+    top: 84px
+
+.glass-right
+    left: 186px
+.glass-left
+    left: 109px
+
+.eyeball
+    position: absolute
+    width: 10px
+    height: 10px
+    background-color: #000
+    top: 0
+    left: 14px
+
+.sky
+    overflow: hidden
+    width: 100%
+    height: 250px
+    position: relative
+
+@keyframes animCloud1
+    from
+        left: 0
+    
+    to 
+        left: -100%
+
+@keyframes animCloud2
+    from
+        left: 100%
+    
+    to 
+        left: 0%
+
+.sky img
+    position: absolute
+    width: 100%
+    height: 250px
+    top: 0
+
+.clouds1
+    animation: animCloud1 20s linear infinite
+.clouds2
+    left: 100%
+    animation: animCloud2 20s linear infinite
+
+
+.ground img
+    width: 100%
+    height: 100%
+    
+.ground img.mini-me
+    width: 300px
+    height: 300px
